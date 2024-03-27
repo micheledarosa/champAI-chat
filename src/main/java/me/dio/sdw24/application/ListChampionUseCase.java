@@ -1,13 +1,14 @@
 package me.dio.sdw24.application;
 
-import me.dio.sdw24.domain.model.Champions;
+import me.dio.sdw24.domain.model.Champion;
 import me.dio.sdw24.domain.ports.ChampionsRepository;
 
 import java.util.List;
 
-public record ListChampionsUseCase(ChampionsRepository repository){
+public record ListChampionUseCase(ChampionsRepository repository){
 
-    public List<Champions> findAll() {
+    public List<Champion> findAll() {
+
         return repository.findAll();
     }
 }
